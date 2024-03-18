@@ -1,0 +1,16 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"node": "16"
+				},
+				"exclude": ["proposal-dynamic-import"]
+			}
+		]
+	],
+	"plugins": [
+		"add-module-exports"
+	]
+}

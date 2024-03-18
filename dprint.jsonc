@@ -1,0 +1,24 @@
+{
+	"lineWidth": 120,
+	"useTabs": true,
+	"typescript": {
+		"semiColons": "always",
+		"quoteStyle": "alwaysDouble",
+		"quoteProps": "consistent",
+		"newLineKind": "crlf",
+		"singleBodyPosition": "sameLine",
+		"trailingCommas": "onlyMultiLine",
+		"binaryExpression.operatorPosition": "sameLine",
+		"preferSingleLine": false,
+		"typeLiteral.separatorKind": "comma",
+		"spaceSurroundingProperties": false,
+		"commentLine.forceSpaceAfterSlashes": false
+	},
+	"excludes": [
+		"**/node_modules",
+		"lib/"
+	],
+	"plugins": [
+		"https://plugins.dprint.dev/typescript-0.88.8.wasm"
+	],
+}

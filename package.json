@@ -21,6 +21,10 @@
     "testcafe-browser-provider-webdriverio-appium": "github:htho/testcafe-browser-provider-webdriverio-appium"
   },
   "devDependencies": {
-    "@types/pngjs": "^6.0.4"
+    "@types/pngjs": "^6.0.4",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "dprint": "^0.45.0",
+    "eslint": "^8.57.0"
   }
 }

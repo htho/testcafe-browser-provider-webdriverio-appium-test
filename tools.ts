@@ -6,7 +6,7 @@ export function mkValidPath(path: string): string {
 }
 
 export function getRandomIntInRange(min: number, max: number) {
-    return min + Math.floor(Math.random() * (max - min));
+	return min + Math.floor(Math.random() * (max - min));
 }
 
 export const getWindowInnerWidth = ClientFunction(() => window.innerWidth);
