@@ -1,0 +1,26 @@
+{
+  "name": "testcafe-browser-provider-webdriverio-appium-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.tc.ts",
+  "scripts": {
+    "list": "testcafe -b webdriverio-appium",
+    "test": "testcafe webdriverio-appium:macOS:safari,webdriverio-appium:iPhoneSE3:safari,webdriverio-appium:win:chrome,webdriverio-appium:local:chrome,webdriverio-appium:local:chrome:headless test.tc.ts",
+    "test:macOS:safari": "testcafe webdriverio-appium:macOS:safari test.tc.ts",
+    "test:iPhoneSE3:safari": "testcafe webdriverio-appium:iPhoneSE3:safari test.tc.ts",
+    "test:win:chrome": "testcafe webdriverio-appium:win:chrome test.tc.ts",
+    "test:local:chrome": "testcafe webdriverio-appium:local:chrome test.tc.ts",
+    "test:local:chrome:headless": "testcafe webdriverio-appium:local:chrome:headless test.tc.ts"
+  },
+  "repository": {},
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pngjs": "^7.0.0",
+    "testcafe": "^3.5.0",
+    "testcafe-browser-provider-webdriverio-appium": "github:htho/testcafe-browser-provider-webdriverio-appium"
+  },
+  "devDependencies": {
+    "@types/pngjs": "^6.0.4"
+  }
+}

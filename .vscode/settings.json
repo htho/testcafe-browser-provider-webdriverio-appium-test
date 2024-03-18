@@ -1,0 +1,24 @@
+{
+	"editor.rulers": [
+		72,
+		80
+	],
+	"editor.detectIndentation": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "dprint.dprint",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "always"
+	},
+
+	"editor.linkedEditing": true,
+
+	"[typescript]": {
+		"editor.defaultFormatter": "dprint.dprint"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dprint.dprint"
+	},
+
+	"eslint.lintTask.enable": true,
+	"eslint.validate": ["javascript", "typescript", "html"]
+}

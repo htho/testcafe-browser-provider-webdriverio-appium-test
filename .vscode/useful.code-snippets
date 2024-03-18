@@ -1,0 +1,71 @@
+{
+	"testcafe-test": {
+		"scope": "javascript,typescript",
+		"prefix": "test",
+		"body": [
+			"test(\"$1\", async(t) => {",
+			"	$2",
+			"});"
+		],
+	},
+	"testcafe-fixture": {
+		"scope": "javascript,typescript",
+		"prefix": "fixture",
+		"body": [
+			"fixture(\"$1\")",
+			"	.page(`http://\\${hostIp}/?picture=Start`)",
+			"	.beforeEach(async(t) => {",
+			"		await loadPage(t);",
+			"	})",
+			"	.afterEach(async(t) => {",
+			"		await unloadPage(t);",
+			"	});"
+		],
+	},
+
+
+	"newJsPromise": {
+		"scope": "javascript",
+		"prefix": "new Promise",
+		"body": [
+			"new Promise((resolve, reject) => {",
+			"	$1",
+			"});"
+		],
+	},
+	"newTsPromise": {
+		"scope": "typescript",
+		"prefix": "new Promise",
+		"body": [
+			"new Promise<$1>((resolve, reject) => {",
+			"	$2",
+			"});"
+		],
+	},
+
+	"throwNewErrorTemplateString": {
+		"scope": "javascript,typescript",
+		"prefix": "throw new Error",
+		"body": [
+			"throw new Error(`$1`);"
+		],
+	},
+
+	"jsType": {
+		"scope": "javascript",
+		"prefix": "@type",
+		"body": "/** @type {$1} */"
+	},
+	"jsTypeComment": {
+		"scope": "javascript",
+		"prefix": "/** @type",
+		"body": "/** @type {$1} */"
+	},
+
+	"importComment": {
+		"scope": "javascript,typescript",
+		"prefix": "import(",
+		"body": "import(\"./$1\").$0",
+	}
+
+}
