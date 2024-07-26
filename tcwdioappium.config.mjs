@@ -10,43 +10,103 @@ const macServer = {
 
 /** @type {import("testcafe-browser-provider-webdriverio-appium").TcWdioAppiumConfig} */
 export default {
-	"macOS:safari": {
+	"Mac:safari": {
 		...macServer,
 		capabilities: {
-			"platformName": "Mac",
 			"appium:automationName": "Safari",
+
+			"platformName": "Mac",
 			"browserName": "Safari",
-		}
+		},
 	},
+
 	"iPhoneSE3:safari": {
 		...macServer,
 		capabilities: {
-			"platformName": "iOS",
+			"appium:automationName": "xcuitest",
+
+			"platformName": "ios",
+			"browserName": "safari",
+			
+			"appium:deviceName": "iPhone SE (3rd generation)",
+		},
+	},
+
+	"iPhoneSE3:safari:safari-driver": {
+		...macServer,
+		capabilities: {
 			"appium:automationName": "Safari",
+			
+			"platformName": "iOS",
 			"browserName": "Safari",
+			
 			"safari:useSimulator": true,
 			"safari:deviceName": "iPhone SE (3rd generation)",
 		}
 	},
+
+	"iPad6:safari": {
+		...macServer,
+		capabilities: {
+			"appium:automationName": "xcuitest",
+			
+			"platformName": "ios",
+			"browserName": "safari",
+
+			"appium:deviceName": "iPad (6th generation)",
+		},
+	},
+
+	"iPad6:safari:safari-driver": {
+		...macServer,
+		capabilities: {
+			"appium:automationName": "Safari",
+			
+			"platformName": "iOS",
+			"browserName": "Safari",
+			
+			"safari:useSimulator": true,
+			"safari:deviceName": "iPad (6th generation)",
+		},
+		"tcwdioappium:resizeStrategy": "rotateDevice"
+	},
+
+	"iPadRealDevice:safari:safari-driver": {
+		...macServer,
+		capabilities: {
+			"appium:automationName": "Safari",
+			
+			"platformName": "iOS",
+			"browserName": "Safari",
+			
+			"safari:useSimulator": false,
+			"safari:deviceName": "my-ipad",
+		},
+	},
+
 	"win:chrome": {
 		...winServer,
 		capabilities: {
+			"appium:automationName": "Chromium",
+
 			"platformName": "windows",
 			"browserName": "chrome",
-			"appium:automationName": "Chromium",
-		}
+		},
 	},
+
+	/** does not use Appium */
 	"local:chrome": {
 		capabilities: {
-			"browserName": "chrome",
-		}
+			browserName: "chrome",
+		},
 	},
+	/** does not use Appium */
 	"local:chrome:headless": {
 		capabilities: {
 			"browserName": "chrome",
 			"goog:chromeOptions": {
 				args: ["headless"],
-			}
-		}
+			},
+		},
 	},
 };

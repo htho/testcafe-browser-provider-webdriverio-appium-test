@@ -1,0 +1,8 @@
+{
+    "src": [
+        "./resize-fixed-rotate.tc.ts",
+        "./resize-windowed.tc.ts",
+        "./screenshot-windowed.tc.ts",
+        "./screenshot-fixed.tc.ts"
+    ]
+}

@@ -1,27 +1,34 @@
 {
   "name": "testcafe-browser-provider-webdriverio-appium-test",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Tests and Examples for testcafe-browser-provider-webdriverio-appium-test.",
+  "private":"true",
   "main": "test.tc.ts",
   "scripts": {
     "list": "testcafe -b webdriverio-appium",
-    "test": "testcafe webdriverio-appium:macOS:safari,webdriverio-appium:iPhoneSE3:safari,webdriverio-appium:win:chrome,webdriverio-appium:local:chrome,webdriverio-appium:local:chrome:headless test.tc.ts",
-    "test:macOS:safari": "testcafe webdriverio-appium:macOS:safari test.tc.ts",
-    "test:iPhoneSE3:safari": "testcafe webdriverio-appium:iPhoneSE3:safari test.tc.ts",
-    "test:win:chrome": "testcafe webdriverio-appium:win:chrome test.tc.ts",
-    "test:local:chrome": "testcafe webdriverio-appium:local:chrome test.tc.ts",
-    "test:local:chrome:headless": "testcafe webdriverio-appium:local:chrome:headless test.tc.ts"
+    "test:Mac:safari": "testcafe webdriverio-appium:Mac:safari",
+    "test:iPhoneSE3:safari": "testcafe webdriverio-appium:iPhoneSE3:safari --fixture-meta viewPort=fixed",
+    "test:iPhoneSE3:safari:safari-driver": "testcafe webdriverio-appium:iPhoneSE3:safari:safari-driver --fixture-meta viewPort=fixed",
+    "test:iPad6:safari": "testcafe webdriverio-appium:iPad6:safari --fixture-meta viewPort=fixed",
+    "test:iPad6:safari:safari-driver": "testcafe webdriverio-appium:iPad6:safari:safari-driver --fixture-meta viewPort=fixed",
+    "test:iPad10:safari": "testcafe webdriverio-appium:iPad10:safari --fixture-meta viewPort=fixed",
+    "test:win:chrome": "testcafe webdriverio-appium:win:chrome",
+    "test:local:chrome": "testcafe webdriverio-appium:local:chrome",
+    "test:local:chrome:headless": "testcafe webdriverio-appium:local:chrome:headless"
   },
-  "repository": {},
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htho/testcafe-browser-provider-webdriverio-appium-test.git"
+  },
+  "author": "Hauke T.",
   "license": "MIT",
   "dependencies": {
     "pngjs": "^7.0.0",
-    "testcafe": "^3.5.0",
+    "testcafe": "^3.6.2",
     "testcafe-browser-provider-webdriverio-appium": "github:htho/testcafe-browser-provider-webdriverio-appium"
   },
   "devDependencies": {
-    "@types/pngjs": "^6.0.4",
+    "@types/pngjs": "^6.0.5",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "dprint": "^0.45.0",

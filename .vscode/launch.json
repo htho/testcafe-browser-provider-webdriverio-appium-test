@@ -10,8 +10,7 @@
 			"name": "Launch test with TestCafe",
 			"program": "${workspaceRoot}/node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js",
 			"args": [
-				"webdriverio-appium:local:chrome",
-				"test.tc.ts",
+				"webdriverio-appium:local:chrome"
 			],
 			"console": "integratedTerminal",
 			"cwd": "${workspaceRoot}",
